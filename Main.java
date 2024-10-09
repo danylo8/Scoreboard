@@ -7,6 +7,8 @@ public class Main {
         info = game.getScore();
         System.out.println(info);
         game.recordPlay(1);
+        info = game.getScore();
+        System.out.println(info);
 
 
     }
