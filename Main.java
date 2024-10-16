@@ -18,7 +18,6 @@ public class Main {
         info = game.getScore();
         System.out.println(info);
 
-
         game.recordPlay(3);
         info = game.getScore();
         System.out.println(info);
