@@ -20,24 +20,23 @@ public class Scoreboard
 
     public void recordPlay(int score)
     {
-        if(teamOne.equals(activeTeam))
+
+        if(score>0 && activeTeam == teamOne)
         {
             teamOneScore += score;
-            if(score == 0)
-            {
-                if(activeTeam.equals(teamOne)) activeTeam = teamTwo;
-
-            }
-        }
-
-        if(teamTwo.equals(activeTeam))
+        } else if(score>0 && activeTeam == teamTwo)
         {
-            teamTwoScore +=score;
-            if(score == 0)
+            teamTwoScore += score;
+        } else if(score == 0)
+        {
+            if (activeTeam==teamOne)
             {
-                if(activeTeam.equals(teamTwo)) activeTeam = teamOne;
-
+                activeTeam=teamTwo;
+            } else if (activeTeam == teamTwo)
+            {
+                activeTeam=teamOne;
             }
+
         }
 
 
